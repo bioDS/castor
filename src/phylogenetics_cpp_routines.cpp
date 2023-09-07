@@ -27353,7 +27353,7 @@ Rcpp::List generate_random_tree_HBDS_CPP(	const long 	 				max_sampled_tips,	// 
 	}
 	extant_tips.clear();
 	if(include_extant){
-		extant_tips.reserve(1+Nbirths-Ndeaths-Nsamplings);
+		extant_tips.reserve(1+Nbirths-Ndeaths-Nsamplings+Nretentions);
 		for(long nc=0; nc<new2old_clade.size(); ++nc){
 			if(clade_type[new2old_clade[nc]]==CladeTypeExtantTip) extant_tips.push_back(nc);
 		}
